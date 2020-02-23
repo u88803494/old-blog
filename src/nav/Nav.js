@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import './nav.css';
 
 class TheNavbar extends React.Component {
@@ -59,13 +60,19 @@ class TheNavbar extends React.Component {
         fixed="top"
         className={isHidden && "navbar--hide"}
       >
-        <Navbar.Brand href="/#">React-Blog</Navbar.Brand>
+        <Navbar.Brand>React-Blog</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/#index">首頁</Nav.Link>
-            <Nav.Link href="/#posts">文章列表</Nav.Link>
-            <Nav.Link href="/#about">關於我</Nav.Link>
+            <LinkContainer to="/" exact={true}>
+              <Nav.Link href="/">首頁</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/posts">
+              <Nav.Link href="/posts">文章列表</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/about">
+              <Nav.Link href="/about">關於我</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
