@@ -5,9 +5,9 @@ import './home.css';
 
 const SeeMoreButton = ({ className, text, variant }) => (
   <LinkContainer to="/posts">
-      <Button rel="noopener noreferrer" className={className} variant={variant}>
-        {text}
-      </Button>
+    <Button rel="noopener noreferrer" className={className} variant={variant}>
+      {text}
+    </Button>
   </LinkContainer>
 )
 
