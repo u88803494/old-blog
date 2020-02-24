@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import './home.css';
 import { Button, Figure, Card, CardGroup } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import './home.css';
 
 const SeeMoreButton = ({ className, text, variant }) => (
-  <LinkContainer to="/posts" exact={true}>
-    <Nav.Link rel="noopener noreferrer" className={className} >
-      <Button variant={variant}>
+  <LinkContainer to="/posts">
+      <Button rel="noopener noreferrer" className={className} variant={variant}>
         {text}
       </Button>
-    </Nav.Link>
   </LinkContainer>
 )
 

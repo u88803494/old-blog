@@ -60,18 +60,20 @@ class TheNavbar extends React.Component {
         fixed="top"
         className={isHidden && "navbar--hide"}
       >
-        <Navbar.Brand>React-Blog</Navbar.Brand>
+        <LinkContainer to="/" exact={true}>
+          <Navbar.Brand>React-Blog</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <LinkContainer to="/" exact={true}>
-              <Nav.Link>首頁</Nav.Link>
+              <a className="nav-link">首頁</a>
             </LinkContainer>
             <LinkContainer to="/posts">
-              <Nav.Link>文章列表</Nav.Link>
+              <a className="nav-link">文章列表</a>
             </LinkContainer>
             <LinkContainer to="/about">
-              <Nav.Link>關於我</Nav.Link>
+              <a className="nav-link">關於我</a>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
