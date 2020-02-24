@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from './nav/';
 import Home from './home/';
 import PostList from './post_list/';
@@ -11,7 +11,7 @@ import Footer from './footer/';
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router basename="blog">
         <div className="App">
           <Nav />
           <Route exact path="/" component={Home} />
