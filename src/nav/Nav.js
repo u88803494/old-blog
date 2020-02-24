@@ -65,13 +65,13 @@ class TheNavbar extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <LinkContainer to="/" exact={true}>
-              <Nav.Link href="/">首頁</Nav.Link>
+              <Nav.Link>首頁</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/posts">
-              <Nav.Link href="/posts">文章列表</Nav.Link>
+              <Nav.Link>文章列表</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/about">
-              <Nav.Link href="/about">關於我</Nav.Link>
+              <Nav.Link>關於我</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>

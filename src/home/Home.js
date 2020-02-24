@@ -7,7 +7,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const SeeMoreButton = ({ className, text, variant }) => (
   <LinkContainer to="/posts" exact={true}>
-    <Nav.Link rel="noopener noreferrer" href="/posts" className={className} >
+    <Nav.Link rel="noopener noreferrer" className={className} >
       <Button variant={variant}>
         {text}
       </Button>
